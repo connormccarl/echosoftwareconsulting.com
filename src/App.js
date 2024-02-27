@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -9,15 +8,15 @@ function App() {
     <div id="home">
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div className="container px-5">
-                <a className="navbar-brand" href="#home"><img src="/logo.png" width="200px" /></a>
+                <a className="navbar-brand" href="#home" onClick={() => setActive('home')}><img src="/logo.png" width="200px" /></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><a className={`nav-link ${active == 'home' ? 'active' : ''}`} href="#home" onClick={() => setActive('home')}>Home</a></li>
-                        <li className="nav-item"><a className={`nav-link ${active == 'about' ? 'active' : ''}`} href="#features" onClick={() => setActive('about')}>About</a></li>
-                        <li className="nav-item"><a className={`nav-link ${active == 'pricing' ? 'active' : ''}`} href="#pricing" onClick={() => setActive('pricing')}>Pricing</a></li>
-                        <li className="nav-item"><a className={`nav-link ${active == 'testimonials' ? 'active' : ''}`} href="#testimonials" onClick={() => setActive('testimonials')}>Testimonials</a></li>
-                        <li className="nav-item"><a className={`nav-link ${active == 'contact' ? 'active' : ''}`} href="#contact" onClick={() => setActive('contact')}>Contact</a></li>
+                        <li className="nav-item"><a className={`nav-link ${active === 'home' ? 'active' : ''}`} href="#home" onClick={() => setActive('home')}>Home</a></li>
+                        <li className="nav-item"><a className={`nav-link ${active === 'about' ? 'active' : ''}`} href="#features" onClick={() => setActive('about')}>About</a></li>
+                        <li className="nav-item"><a className={`nav-link ${active === 'pricing' ? 'active' : ''}`} href="#pricing" onClick={() => setActive('pricing')}>Pricing</a></li>
+                        <li className="nav-item"><a className={`nav-link ${active === 'testimonials' ? 'active' : ''}`} href="#testimonials" onClick={() => setActive('testimonials')}>Testimonials</a></li>
+                        <li className="nav-item"><a className={`nav-link ${active === 'contact' ? 'active' : ''}`} href="#contact" onClick={() => setActive('contact')}>Contact</a></li>
                     </ul>
                 </div>
             </div>
